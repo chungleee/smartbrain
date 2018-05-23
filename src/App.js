@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Particles from 'react-particles-js';
+// import Particles from 'react-particles-js';
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import Rank from './components/Rank/Rank';
@@ -12,17 +12,18 @@ const app = new Clarifai.App({
   apiKey: 'ab76f073ec4441b89fed51acf1539c0d'
  });
 
-const particlesOptions = {
-    particles: {
-      number: {
-        value: 30,
-        density: {
-          enable: true,
-          value_area: 800
-        }
-      }
-    }
-}
+// commented out for FPS reasons
+// const particlesOptions = {
+//     particles: {
+//       number: {
+//         value: 30,
+//         density: {
+//           enable: true,
+//           value_area: 800
+//         }
+//       }
+//     }
+// }
 
 class App extends Component {
   constructor() {
@@ -59,10 +60,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Particles 
+        {/*<Particles 
           params={particlesOptions}
           className='particles'
-        />
+        />*/ /* removed Component because took too much FPS on local machine*/}
         <Navigation />
         <Logo />
         <Rank />
